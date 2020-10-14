@@ -1,0 +1,43 @@
+abstract class AparelhoDeSom {
+  
+  public abstract void liga();
+  public abstract void desliga();
+  public abstract void aumentaVolume(intvalor);
+  public abstract void diminuiVolume(intvalor);
+  
+  public void status() {
+    System.out.println("Status");
+  }
+}
+
+/////////////////////////////////////////////////
+
+class CDPlayer extends AparelhoDeSom {
+  public void liga() {
+    
+    System.out.println("Aparelho de som está ligado");
+  }
+}
+
+
+class Radio extends AparelhoDeSom {
+  public void desliga() {
+    
+    System.out.println("Aparelho de som está desligado");
+  }
+}
+
+/////////////////////////////////////////////////
+
+class MyMainClass {
+  public static void main(String[] args) {
+
+    CDPlayer myCDPlayer = new CDPlayer();
+    myCDPlayer.liga();
+    myCDPlayer.status();
+
+    Radio myRadio = new Radio();
+    myRadio.desliga();
+    myRadio.status();
+  }
+}
