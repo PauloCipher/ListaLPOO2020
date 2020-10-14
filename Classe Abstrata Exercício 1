@@ -41,13 +41,15 @@ class MyMainClass {
   public static void main(String[] args) {
 
     Livro myLivro = new Livro(); 
-    Revista myRevista = new Revista();
-    Tese myTese = new Tese();
     myLivro.disponivel();
-    myRevista.emprestado();
-    myTese.reservado();
     myLivro.status();
+    
+    Revista myRevista = new Revista();
+    myRevista.emprestado();
     myRevista.status();
+     
+    Tese myTese = new Tese();
+    myTese.reservado();
     myTese.status();
   }
 }
