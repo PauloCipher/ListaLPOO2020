@@ -1,0 +1,53 @@
+abstract class ItemDeBiblioteca {
+  
+  public abstract void disponivel();
+  public abstract void emprestado();
+  public abstract void emAtraso();
+  public abstract void reservado();
+  
+  public void status() {
+    System.out.println("Status");
+  }
+}
+
+/////////////////////////////////////////////////
+
+class Livro extends ItemDeBiblioteca {
+  public void disponivel() {
+    
+    System.out.println("O Livro está disponível");
+  }
+}
+
+
+class Revista extends ItemDeBiblioteca {
+  public void emprestado() {
+    
+    System.out.println("A revista está emprestada");
+  }
+}
+
+
+class Tese extends ItemDeBiblioteca {
+  public void reservado() {
+    
+    System.out.println("A Tese está reservada");
+  }
+}
+
+/////////////////////////////////////////////////
+
+class MyMainClass {
+  public static void main(String[] args) {
+
+    Livro myLivro = new Livro(); 
+    Revista myRevista = new Revista();
+    Tese myTese = new Tese();
+    myLivro.disponivel();
+    myRevista.emprestado();
+    myTese.reservado();
+    myLivro.status();
+    myRevista.status();
+    myTese.status();
+  }
+}
