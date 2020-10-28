@@ -1,0 +1,39 @@
+public class Disciplina{
+    
+    public void mDisciplina() {
+    System.out.println("Disciplina");
+  }
+    
+}
+
+class DisciplinaTrimestral extends Disciplina {
+  public void mDisciplina() {
+    System.out.println("Disciplina Trimestral");
+  }
+}
+
+class DisciplinaSemestral extends Disciplina {
+  public void mDisciplina() {
+    System.out.println("Disciplina Semestral");
+  }
+}
+
+class DisciplinaAnual extends Disciplina {
+  public void mDisciplina() {
+    System.out.println("Disciplina Anual");
+  }
+}
+
+class DisciplinaPrincipal {
+  public static void main(String[] args) {
+    Disciplina myDisciplina = new Disciplina();
+    Disciplina myDisciplinaTrismestral = new DTrimestral();
+    Disciplina myDisciplinaSemestral = new DSemestral();
+    Disciplina myDisciplinaAnual = new DAnual();
+        
+    myDisciplina.mDisciplina();
+    myDisciplinaTrismestral.mDisciplina();
+    myDisciplinaSemestral.mDisciplina();
+    myDisciplinaAnual.mDisciplina
+  }
+}
